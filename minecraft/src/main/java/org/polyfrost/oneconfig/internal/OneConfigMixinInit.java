@@ -81,6 +81,11 @@ public class OneConfigMixinInit implements IMixinConfigPlugin {
         //$$mixins.add("compat.modmenu.Mixin_ModMenu");
         //#endif
 
+        //#if MC>=1.21.5
+        //$$mixins.add("compat.Accessor_Meowdding_Overlays");
+        //$$mixins.add("compat.Mixin_Meowdding_Overlays");
+        //#endif
+
         //#if FORGE
         mixins.add("events.Mixin_ChatReceiveEvent_Forge");
         //#if MC < 1.13

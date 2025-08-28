@@ -262,6 +262,15 @@ dependencies {
     )
     compileOnlyCompat(modMenu[mcVersionString])
 
+    if (mcData.version >= MinecraftVersions.VERSION_1_21_5 && mcData.isFabric) {
+        modCompileOnly("me.owdding.meowdding-lib:meowdding-lib:2.2.15") {
+            isTransitive = false
+            attributes {
+                attribute(Attribute.of("earth.terrarium.cloche.modLoader", String::class.java), "fabric")
+                attribute(Attribute.of("earth.terrarium.cloche.minecraftVersion", String::class.java), "1.21.5")
+            }
+        }
+    }
 
     provideIncludedDependencies(
         Triple(mcVersion.major, mcVersion.minor, mcVersion.patch),

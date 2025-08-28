@@ -436,6 +436,9 @@ abstract class Hud<T : Drawable>(id: String, title: String, val category: Catego
 
             @JvmStatic
             val PLAYER = Category("oneconfig.player", 3)
+
+            @JvmStatic
+            val COMPAT = Category("oneconfig.compat", 4)
         }
 
         override fun toString() = name
